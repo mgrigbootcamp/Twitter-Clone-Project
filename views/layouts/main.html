@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SquawkBox</title>
+  <link rel="stylesheet" type="text/css" href="bulma.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <img alt="The Squawker"> 
+    <div class="nav-buttons">
+      <!-- {{#if loggedIn}} -->
+        <!-- <button href="/" class="button is-info">Logout</button> -->
+      <!-- {{else}} -->
+      <button href="/" class="button is-info">Login</button> <button href="/" class="button is-info">Sign Up</button>
+      <!-- {{/if}} -->
+    </div>
+  </nav>
+  <main>
+    <div class=".container">
+      {{{body}}}
+    </div>
+  </main>
+</body>
+
+</html>
