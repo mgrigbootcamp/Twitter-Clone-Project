@@ -5,10 +5,22 @@ router.get('/', async (req, res) => {
 
     });
 })
-router.get ('/newsfeed', async (req, res)=>{
-    res.render('newsfeed',{
-        
+router.get('/newsfeed', async (req, res) => {
+    res.render('newsfeed', {
+
     })
 })
 
+router.get('/sqwuak', async (req, res) => {
+    res.render('Sqwuak!', {
+
+    })
+})
+
+router.delete('/deletesqwuak', async (req, res) => {
+    res.render('Post Deleted', {
+
+    });
+
+})
 module.exports = router;
