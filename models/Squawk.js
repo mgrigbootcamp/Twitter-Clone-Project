@@ -1,0 +1,40 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Squawk extends Model {}
+
+Squawk.init(
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'user_id',
+            },
+        },
+        squawk: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        posted_at: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        }
+    },
+    {   
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'squawk',
+    }
+);
+
+module.exports = Squawk;
