@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const User = require('./models/User');
+const Squawk = require('./models/Squawk');
 
 // const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -15,9 +16,8 @@ const PORT = process.env.PORT || 3001;
 
 // Set up sessions with cookies
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SECRET,
   cookie: {
-    // Stored in milliseconds (86400 === 1 day)
     maxAge: 86400,
   },
   resave: false,
