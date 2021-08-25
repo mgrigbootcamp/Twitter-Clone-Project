@@ -1,2 +1,13 @@
 const User = require('./User');
-module.exports = { User };
+const Squawk = require('./Squawk');
+
+Squawk.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+
+User.hasMany(Squawk, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE',
+});
+
+module.exports = { User, Squawk };
