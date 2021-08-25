@@ -17,7 +17,15 @@
         <!-- <button href="/" class="button is-info">Logout</button> -->
       <!-- {{else}} -->
       <button href="/" class="button is-info">Login</button> <button href="/" class="button is-info">Sign Up</button>
+      <button href= "/" class= "button is-info">Post</button>
       <!-- {{/if}} -->
+     <form class="Squawk extends Model">
+      <div class="form-group">
+        <label for="Squawk">Squawk:</label>
+        <input class="form-input" type="text" id="Squawk" name="Post" />
+
+        
+      
     </div>
   </nav>
   <main>
@@ -25,18 +33,7 @@
       {{{body}}}
     </div>
   </main>
-  <script>
-    window.onload= function (){
-      console.log("Loaded!");
-      var router = function (name, routes){
-        return {
-          name: name,
-          routes: routes
-        }
-      }
-    };
-    
-  </script>
+  <script>src=main.js</script>
 </body>
 
 </html>
