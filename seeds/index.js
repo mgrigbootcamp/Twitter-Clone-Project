@@ -1,18 +1,18 @@
 const sequelize = require('../config/connection');
-const seedSquawks = require('./squawksData');
-const Squawk = require('../models/Squawk');
 const User = require('../models/User');
-const userData = require('./userData');
+const Squawk = require('../models/Squawk');
+const squawksData = require('./squawksData.js');
+const userData = require('./userData.js');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
-    // console.log(userData);
+    console.log(userData);
     await User.bulkCreate(userData, {
         individualHooks: true,
         returning: true
     });
 
-    await Squawk.bulkCreate(seedSquawks, {
+    await Squawk.bulkCreate(squawksData, {
         individualHooks: true,
         returning: true
     });

@@ -1,23 +1,10 @@
 const router = require('express').Router();
-const { User, Squawk } = require('../models');
+const { User, Squawk } = require('../../models');
 
-router.get('/', async (req, res) => {
-    res.render('homepage', {
-
-    });
-})
-
-router.get ('/newsfeed', async (req, res)=>{
+router.get ('/', async (req, res)=>{
     try {
         // Get all projects and JOIN with user data
-        const squawksData = await Squawk.findAll({
-          include: [
-            {
-              model: User,
-              attributes: ['username'],
-            },
-          ],
-        });
+        const squawksData = await Squawk.findAll();
     
         // Serialize data so the template can read it
         const squawks = squawksData.map((squawk) => squawk.get({ plain: true }));
@@ -27,7 +14,7 @@ router.get ('/newsfeed', async (req, res)=>{
         });
     } catch (err) {
         res.status(500).json(err);
-    };
+    }
 });
 
 module.exports = router;

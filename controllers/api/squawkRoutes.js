@@ -22,7 +22,7 @@
 //         });
 
 //         if (!user_id) {
-//             res.send('<script> alert("You can only delete your own squawks!") </script>');
+//             res.send('<script> alert('\You can only delete your own squawks!') </script>');
 //         }
 //     }
 // })

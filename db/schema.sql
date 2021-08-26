@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS squawkbox_db;
+-- DROP DATABASE IF EXISTS squawkbox_db;
 
-CREATE DATABASE squawkbox_db;
+CREATE DATABASE IF NOT EXISTS squawkbox_db;
