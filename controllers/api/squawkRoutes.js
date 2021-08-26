@@ -1,16 +1,17 @@
-// const router = require('express').Router();
-// const { Squawk } = require('../../models/Squawk');
+const router = require('express').Router();
+const { DATE } = require('sequelize/types');
+const { Squawk } = require('../../models');
 
-// router.post('/', async (req, res) => {
-//     try {
-//         const newSquawk = await Squawk.create({
-//             req.body,
-//             user_id: req.session.user_id,
-//         })
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
+router.post('/', async (req, res) => {
+    try {
+        const newSquawk = await Squawk.create({
+            ...req.body,
+            posted_at: new Date()
+        })
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
 
 // router.delete('/:id', async(req, res) => {
 //     try {
@@ -27,4 +28,4 @@
 //     }
 // })
 
-// module.exports = router;
+module.exports = router;
