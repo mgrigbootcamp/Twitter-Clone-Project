@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 
 // Set up sessions with cookies
 const sess = {
-  secret: process.env.SECRET,
+  secret: "Super secret secret",
   cookie: {
     maxAge: 86400,
   },
@@ -29,7 +29,7 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({  });
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(
       `\nServer running on port ${PORT}. Visit http://localhost:${PORT} and create an account!`

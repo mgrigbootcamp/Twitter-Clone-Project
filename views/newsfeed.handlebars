@@ -1,1 +1,7 @@
-<h1>Newsfeed</h1>
+{{#each squawks as |squawk|}}
+    <div class="block">
+        <h1><b>{{ user.username }}<b></h1>
+        <p>{{ squawk.squawk }}</p>
+        <p>{{ squawk.posted_at }}</p>
+    </div>
+{{/each}}
