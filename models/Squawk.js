@@ -26,6 +26,7 @@ Squawk.init(
         posted_at: {
             type: DataTypes.DATE,
             allowNull: false,
+            defaultValue: DataTypes.NOW,
         }
     },
     {   

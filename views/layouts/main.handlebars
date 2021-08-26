@@ -18,7 +18,7 @@
       <!-- {{#if loggedIn}} -->
         <!-- <button href="/" class="button is-info">Logout</button> -->
       <!-- {{else}} -->
-      <button href="/" class="button is-info">Login</button> <button href="/" class="button is-info">Sign Up</button>
+      <button href="#" class="button is-info">Login</button> <button href="#" class="button is-info">Sign Up</button>
       
 
         
@@ -27,16 +27,24 @@
   </nav>
   <main>
     <div class="container">
-      <button href= "/" class= "button is-info">Post</button>
       <!-- {{/if}} -->
-     <form class="Squawk extends Model">
-      <div class="form-group">
-        <label for="Squawk">Squawk:</label>
-        <input class="form-input" type="text" id="Squawk" name="Post" />
+    <form class="form new-squawk-form">
+      <div>
+        <label for="username">Name:</label>
+        <input class="form-input" type="text" id="username" name="username" />
+      </div>
+      <div>
+        <label for="squawk-post">Squawk:</label>
+        <input class="form-input" type="text" id="squawk-post" name="squawk-post" />
+      </div>
+      <div>
+        <button type="submit" class="button is-info">Post</button>
+      </div>
+    </form>
         {{{body}}}
     </div>
   </main>
-  <script>src=main.js</script>
+  <script src="/js/createPost.js"></script>
 </body>
 
 </html>
