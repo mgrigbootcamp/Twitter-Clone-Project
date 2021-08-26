@@ -3,6 +3,14 @@ nav {
 }
 
 .nav-buttons {
-    text-align: right;
     display: inline-flex;
+    position: absolute;
+    right: 0px;
+    top: 30px;
+}
+
+#logo {
+    display: inline-block;
+    width: 200px;
+    border-radius: 50%;
 }

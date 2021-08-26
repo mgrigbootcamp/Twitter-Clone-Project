@@ -7,6 +7,7 @@ router.get('/', async (req, res) => {
     });
 })
 
+
 router.get ('/newsfeed', async (req, res)=>{
     try {
         // Get all projects and JOIN with user data
@@ -30,4 +31,11 @@ router.get ('/newsfeed', async (req, res)=>{
     };
 });
 
+
+router.delete('/deletesqwuak', async (req, res) => {
+    res.render('Post Deleted', {
+
+    });
+
+})
 module.exports = router;
