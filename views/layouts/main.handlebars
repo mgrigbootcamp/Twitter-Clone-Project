@@ -18,12 +18,7 @@
         <!-- <button href="/" class="button is-info">Logout</button> -->
       <!-- {{else}} -->
       <button href="/" class="button is-info">Login</button> <button href="/" class="button is-info">Sign Up</button>
-      <button href= "/" class= "button is-info">Post</button>
-      <!-- {{/if}} -->
-     <form class="Squawk extends Model">
-      <div class="form-group">
-        <label for="Squawk">Squawk:</label>
-        <input class="form-input" type="text" id="Squawk" name="Post" />
+      
 
         
       
@@ -31,7 +26,13 @@
   </nav>
   <main>
     <div class="container">
-      {{{body}}}
+      <button href= "/" class= "button is-info">Post</button>
+      <!-- {{/if}} -->
+     <form class="Squawk extends Model">
+      <div class="form-group">
+        <label for="Squawk">Squawk:</label>
+        <input class="form-input" type="text" id="Squawk" name="Post" />
+        {{{body}}}
     </div>
   </main>
   <script>src=main.js</script>
