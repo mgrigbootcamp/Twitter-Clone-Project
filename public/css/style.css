@@ -1,7 +1,13 @@
 nav {
-    background-color: lightseagreen;
+    background-color: #20b2aa;
 }
 
 .nav-buttons {
     text-align: right;
+}
+#logo {
+    display: inline-block;
+    width: 200px;
+    border-radius: 50%;
+
 }
