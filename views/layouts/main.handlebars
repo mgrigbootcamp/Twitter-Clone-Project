@@ -7,17 +7,26 @@
   <title>SquawkBox</title>
   <link rel="stylesheet" type="text/css" href="/css/bulma.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <nav>
-    <img  alt="The Squawker"> 
+    <img src="../../public/squawkboxcopy.jpg" alt="The Squawker"> 
     <div class="nav-buttons">
       <!-- {{#if loggedIn}} -->
         <!-- <button href="/" class="button is-info">Logout</button> -->
       <!-- {{else}} -->
       <button href="/" class="button is-info">Login</button> <button href="/" class="button is-info">Sign Up</button>
+      <button href= "/" class= "button is-info">Post</button>
       <!-- {{/if}} -->
+     <form class="Squawk extends Model">
+      <div class="form-group">
+        <label for="Squawk">Squawk:</label>
+        <input class="form-input" type="text" id="Squawk" name="Post" />
+
+        
+      
     </div>
   </nav>
   <main>
@@ -25,18 +34,7 @@
       {{{body}}}
     </div>
   </main>
-  <script>
-    window.onload= function (){
-      console.log("Loaded!");
-      var router = function (name, routes){
-        return {
-          name: name,
-          routes: routes
-        }
-      }
-    };
-    
-  </script>
+  <script>src=main.js</script>
 </body>
 
 </html>
