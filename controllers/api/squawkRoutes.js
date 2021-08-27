@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { DATE } = require('sequelize/types');
+// const { DATE } = require('sequelize/types');
 const { Squawk } = require('../../models');
 
 router.post('/', async (req, res) => {

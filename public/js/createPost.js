@@ -6,7 +6,7 @@ const newSquawkHandler = async (event) => {
     const posted_at = new Date();
   
     if (username && squawk && posted_at) {
-      const response = await fetch(`/api/squawks`, {
+      const response = await fetch(`/`, {
         method: 'POST',
         body: JSON.stringify({ username, squawk, posted_at }),
         headers: {
