@@ -1,12 +1,11 @@
 const router = require('express').Router();
-const { DATE } = require('sequelize/types');
+// const { DATE } = require('sequelize/types');
 const { Squawk } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
         const newSquawk = await Squawk.create({
             ...req.body,
-            posted_at: new Date()
         })
     } catch (err) {
         res.status(400).json(err);

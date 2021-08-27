@@ -8,6 +8,7 @@ const User = require('./models/User');
 const Squawk = require('./models/Squawk');
 
 const routes = require('./controllers/routes');
+
 const sequelize = require('./config/connection');
 
 

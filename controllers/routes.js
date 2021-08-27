@@ -31,4 +31,16 @@ router.get ('/newsfeed', async (req, res)=>{
     };
 });
 
+router.post('/', async (req, res) => {
+    try {
+        const newSquawk = await Squawk.create({
+            ...req.body,
+            user_id: 5
+        })
+    } catch (err) {
+        console.log(err);
+        res.status(400).json(err);
+    }
+});
+
 module.exports = router;
