@@ -6,7 +6,6 @@ router.post('/', async (req, res) => {
     try {
         const newSquawk = await Squawk.create({
             ...req.body,
-            posted_at: new Date()
         })
     } catch (err) {
         res.status(400).json(err);

@@ -1,4 +1,4 @@
-const newFormHandler = async (event) => {
+const newSquawkHandler = async (event) => {
     event.preventDefault();
   
     const squawk = document.querySelector('#squawk-post').value.trim();
@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
     if (username && squawk && posted_at) {
       const response = await fetch(`/api/squawks`, {
         method: 'POST',
-        body: JSON.stringify({ username, squawk, posted_at}),
+        body: JSON.stringify({ username, squawk, posted_at }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -40,7 +40,7 @@ const newFormHandler = async (event) => {
   
   document
     .querySelector('.new-squawk-form')
-    .addEventListener('submit', newFormHandler);
+    .addEventListener('submit', newSquawkHandler);
   
 //   document
 //     .querySelector('.project-list')
